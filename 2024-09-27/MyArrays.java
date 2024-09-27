@@ -7,11 +7,17 @@ public class myArrays.java {
     return thing;
   }
   public static int concatArray(int[] ary1, int[] ary2){
-    int[] arr = new int[ary1.length + ary2.length];
-    for )
+    int sumLength = ary1.length + ary2.length;
+    int[] arr = new int[length];
+    for (int i = 0; i < ary1.length; i++){
+      arr[i] = ary1[i];
+    }
+    for (int i = ary1.length; i < ary2.length; i++){
+      arr[i] = ary2[i];
+    }
+    return arr;
   }
   public static void main(String[] args){
-
   }
   public static arrayToString(int[] nums){
     String[] ary = new String[nums.length]
