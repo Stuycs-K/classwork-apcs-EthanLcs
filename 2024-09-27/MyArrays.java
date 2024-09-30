@@ -18,18 +18,26 @@ public class MyArrays {
     return arr;
   }
 
-  public static String[] arrayToString(int[] nums){
-    String[] ary = new String[nums.length]; 
-    for (int i = 0; i < nums.length; i++){
-      ary[i] = "" + nums[i];
+  public static String arrayToString(int[] nums){
+    if (nums.length == 0){
+      return "[]";
     }
-    return ary;
+    String initial = "";
+    initial = initial + "[";  
+    for (int i = 0; i < nums.length; i++){
+      initial += nums[i];
+      if (i < nums.length - 1){
+        initial += ", ";
+      }
+    }
+    initial += "]";
+    return initial;
   }
   public static void main(String[] args){
     int[] original = {0,1,2,3,4};
     int[] copy = returnCopy(original);
 
-    System.out.println("Original and returnCopy Test" + java.util.Arrays.equals(original,copy));
+    System.out.println("Original and returnCopy Test " + java.util.Arrays.equals(original,copy));
 
     int[] part1 = {1,2};
     int[] part2 = {3,4};
@@ -38,7 +46,7 @@ public class MyArrays {
 
     int[] stringArray = {1, 2, 3, 4};
     
-    System.out.println("int array to strings " + java.util.Arrays.toString(arrayToString(stringArray)));
+    System.out.println("int array to strings " + (arrayToString(stringArray)));
   }
 }
   
