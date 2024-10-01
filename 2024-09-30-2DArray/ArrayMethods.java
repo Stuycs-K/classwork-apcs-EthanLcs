@@ -33,14 +33,15 @@ public static String arrToString(int[][]ary){
         initial += ", ";
     }
   }
+  initial+="]";
   return initial;
 }
 
 /*Return the sum of all of the values in the 2D array */
 public static int arr2DSum(int[][]nums){
     int sum = 0;
-    for (int i = 0; i < ary.length; i++){
-        for (int j = 0; j < ary[i].length; j++) {
+    for (int i = 0; i < nums.length; i++){
+        for (int j = 0; j < nums[i].length; j++) {
             sum += nums[i][j];
         }
     }
@@ -54,11 +55,31 @@ public static int arr2DSum(int[][]nums){
   * [2][3] -> [3][2]
   */
 public static int[][] swapRC(int[][]nums){
-    int[][] result = new int[nums[0].length][];
-    for (int j = 0; j <)
-  return
+  int numRows = nums.length;
+  int numCol = nums[0].length;
+  int[][] result = new int[numCol][numRows]; 
+    for (int i = 0; i < nums.length; i++){
+      for (int j = 0; j < nums[i].length; j++){
+        result[j][i] = nums[i][j];
+      }
+    }
+  return result;
 }
   public static void main(String[] args){
+    //testing ArrayMethods
+    int[] thing = {1,2,3,4,5};
+    System.out.println(arrayToString(thing));
 
+    //testing arrToString
+    int[][] twoDThing = {{1,2}, {3,4}};
+    System.out.println(arrToString(twoDThing));
+
+    //testing arr2dSum
+    System.out.println(arr2DSum(twoDThing));
+
+    //testing swapRC
+    int[][] twoD = {{1,2,3}, {4,5,6}};
+    int[][] swapped = swapRC(twoD);
+    System.out.println(arrToString(swapped));
   }
 } 
