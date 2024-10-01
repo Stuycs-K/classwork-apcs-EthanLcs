@@ -98,12 +98,16 @@ public static int[] copyHelper(int[] nums) {
 }
 
 public static int[][] copy(int[][] nums){
+  if (nums == null){
+    return null;
+  }
+  
   int[][] copy = new int[nums.length][];
-        for (int[] num : nums) {
-          
+        for (int i = 0; i < nums.length; i++) {
+          copy[i] = copyHelper(copy[i]);
         }
 
-  return null;//placeholder so it compiles
+  return copy;
 }
 
   public static void main(String[] args){
