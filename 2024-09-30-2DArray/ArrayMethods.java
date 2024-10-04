@@ -77,8 +77,9 @@ public static void replaceNegative(int[][] vals){
       if (vals[i][j] < 0) {
         if (i == j) {
           vals[i][j] = 1;
+        } else {
+          vals[i][j] = 0;
         }
-        vals[i][j] = 0;
       }
     }
   }
@@ -104,7 +105,7 @@ public static int[][] copy(int[][] nums){
   
   int[][] copy = new int[nums.length][];
         for (int i = 0; i < nums.length; i++) {
-          copy[i] = copyHelper(copy[i]);
+          copy[i] = copyHelper(nums[i]);
         }
 
   return copy;
