@@ -27,6 +27,7 @@ public class ArrayDemo {
     return zeroCount;
   }
 
+
     //3. Write arrToString, with a 2D array parameter.
 //Note: Different parameters are allowed with the same function name.
 /**Return a String that represets the 2D array in the format:
@@ -121,6 +122,26 @@ public static int[][] copy(int[][] nums){
 
   return copy;
 }
+
+
+  //6. Make an HTML table by putting a table tag around the entire 2d array,
+  //   tr tags around each row, and td tags around each value.
+  //   You may use a helper method
+  //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
+  //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
+  // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
+  public static String htmlTable(int[][]nums){
+    String start = "<table>";
+    for (int i = 0; i < nums.length; i++) {
+        start += "<tr>";
+        for (int j = 0; j < nums[i].length; j++) {
+            start += "<td>";
+            start += nums[i][j];
+            start += "</td>";
+            if (j )
+        }
+    }
+  }
 
   public static void main(String[] args){
     //testing 1d arrayToString
