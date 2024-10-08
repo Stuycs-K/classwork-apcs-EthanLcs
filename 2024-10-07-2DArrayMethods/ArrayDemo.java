@@ -138,9 +138,13 @@ public static int[][] copy(int[][] nums){
             start += "<td>";
             start += nums[i][j];
             start += "</td>";
-            if (j )
+            
         }
+        start += "</tr>";
     }
+    start += "</table>";
+
+    return start;
   }
 
   public static void main(String[] args){
@@ -159,5 +163,8 @@ public static int[][] copy(int[][] nums){
     int[][] twoD = {{1,2,3}, {4,5,6}};
     int[][] swapped = swapRC(twoD);
     System.out.println(arrToString(swapped));
+
+    //testing htmlTable
+    System.out.println(htmlTable(twoD));
   }
 } 
