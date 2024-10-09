@@ -1,5 +1,5 @@
 public class ArrayDemo {
-    public static String arrayToString(int[] nums){
+    public static String arrToString(int[] nums){
     if (nums.length == 0){
       return "[]";
     }
@@ -40,7 +40,7 @@ public static String arrToString(int[][]ary){
   //this should use arrToString(int[])
   String initial = "[";
   for (int i = 0; i < ary.length; i++){
-    initial += arrayToString(ary[i]);
+    initial += arrToString(ary[i]);
     if (i < ary.length - 1) {
         initial += ", ";
     }
@@ -148,9 +148,9 @@ public static int[][] copy(int[][] nums){
   }
 
   public static void main(String[] args){
-    //testing 1d arrayToString
+    //testing 1d arrToString
     int[] thing = {1,2,3,4,5};
-    System.out.println(arrayToString(thing));
+    System.out.println(arrToString(thing));
 
     //testing arrToString
     int[][] twoDThing = {{1,2}, {3,4}};
