@@ -1,4 +1,5 @@
 import java.util.*;
+import javax.print.attribute.Size2DSyntax;
 
 public class ArrayListPractice {
    public static ArrayList<String>createRandomArray(int size){
@@ -18,9 +19,8 @@ public class ArrayListPractice {
     for (int i = 0; i < original.size(); i++){
         if (original.get(i).equals("")){
             original.set(i, "Empty");
+            }
         }
-    }
-    return original;
     } 
     public static ArrayList<String> makeReversedList( ArrayList<String> original){
   //return a new ArrayList that is in the reversed order of the original.
@@ -34,10 +34,25 @@ public class ArrayListPractice {
     return reversedArr;
     } 
     public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
-  //return a new ArrayList that has all values of a and b in alternating order that is:
-  //a[0], b[0], a[1], b[1]...
-  //If one list is longer than the other, just attach the remaining values to the end.
+    //return a new ArrayList that has all values of a and b in alternating order that is:
+    //a[0], b[0], a[1], b[1]...
+    //If one list is longer than the other, just attach the remaining values to the end.
+    
+    ArrayList<String> mixedArr = new ArrayList<String>();
+
+    int smallerSize = Math.min(a.size(), b.size());
+    int biggerOne = Math.max(a.size(), b.size());
+
+    int i = 0;
+    while (i < smallerSize);
+        mixedArr.set(i, a.get(i));
+        i++;
+        mixedArr.set(i, b.get(i));
+        i++;
     } 
+    while (i < biggerOne){
+        
+    }
 
    
     public static void main(String[] args) {
