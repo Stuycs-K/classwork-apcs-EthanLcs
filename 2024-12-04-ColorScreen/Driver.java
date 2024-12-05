@@ -2,10 +2,19 @@ import java.util.*;
 
 public class Driver {
     public static void main(String[] args){
+        System.out.print(Text.CLEAR_SCREEN);
+        System.out.print(Text.HIDE_CURSOR);
+        
         drawBorder();
 
         int[] randomNumbers = threeRandomInt();
+        draw(randomNumbers);
 
+        drawSeperator();
+
+        Text.go(31, 0);
+
+        System.out.print(Text.RESET);
 
 
     }
@@ -51,6 +60,7 @@ public class Driver {
             else {
                 Text.color(Text.WHITE);
             }
+            System.out.print(numbers[i]);
         }
     }
 }
