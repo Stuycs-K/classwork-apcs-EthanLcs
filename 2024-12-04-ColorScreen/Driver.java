@@ -18,8 +18,16 @@ public class Driver {
         for (int row = 0; row <= 30; row++){
             Text.go(row,1);
             System.out.println(" ");
-            Text.go(row, 30);
+            Text.go(row, 80);
             System.out.println(" ");
         }
+    }
+
+    private static int[] threeRandomInt(){
+        int[] nums = new int[3];
+        for (int i = 0; i < 3; i++){
+            nums[i] = (int)Math.random();
+        }
+        return nums;    
     }
 }
