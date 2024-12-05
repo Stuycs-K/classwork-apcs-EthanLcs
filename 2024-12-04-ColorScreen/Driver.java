@@ -4,10 +4,14 @@ public class Driver {
     public static void main(String[] args){
         drawBorder();
 
+        int[] randomNumbers = threeRandomInt();
+
+
 
     }
 
     public static void drawBorder(){
+        Text.color(Text.WHITE, Text.background(Text.BLUE));
         for (int col = 0; col <= 80; col++){
             Text.go(1,col);
             System.out.println(" ");
@@ -29,5 +33,16 @@ public class Driver {
             nums[i] = (int)Math.random();
         }
         return nums;    
+    }
+
+    public static void drawSeperator(){
+        Text.go(3,1);
+        for (int col = 0; col <= 80; col++){
+            System.out.println("-");
+        }
+    }
+
+    public static void draw(){
+        int spacing = 80/ 
     }
 }
