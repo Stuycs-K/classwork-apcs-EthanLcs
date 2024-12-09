@@ -11,11 +11,11 @@ public class Warrior extends Adventurer {
     }
 
     public String getSpecialName(){
-        super.getName();
+        return super.getName() + " the warrior";
     }
 
     public int getSpecial(){
-
+        return special;
     }
     public void setSpecial(int n){
         this.special = n;
@@ -25,7 +25,7 @@ public class Warrior extends Adventurer {
     }
 
     public String attack(Adventurer other){
-
+        return getSpecialName() + "has attacked " + other.getName();
     }
     
     public String support(Adventurer other){
@@ -35,6 +35,6 @@ public class Warrior extends Adventurer {
 
     }
     public String specialAttack(Adventurer other){
-        System.out.println()
+        return
     }
 }
