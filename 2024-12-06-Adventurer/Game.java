@@ -22,8 +22,11 @@ public class Game{
     else if (input.equals("support"){
       p1.support(p2);
     }
-    else {
+    else if (input.equals("quit")){
       System.exit();
+    }
+    else {
+      System.out.printl("type a valid response");
     }
     //Do something with the input
 
