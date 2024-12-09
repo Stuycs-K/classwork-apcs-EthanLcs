@@ -6,9 +6,8 @@ public class Warrior extends Adventurer {
         super(name);
     }
 
-    public Warrior(String name, int hp, String thing){
+    public Warrior(String name, int hp){
         super(name, hp);
-        this.resource = thing;
     }
 
     public String getSpecialName(){
@@ -43,8 +42,6 @@ public class Warrior extends Adventurer {
         return getName() + " new hp is " + this.getHP();
      }
     public String specialAttack(Adventurer other){
-        
-
         return getName() + " has used " + getSpecial() + 
         " and hurt the "  + other.getName();
     }
