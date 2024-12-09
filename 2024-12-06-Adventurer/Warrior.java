@@ -1,5 +1,7 @@
 public class Warrior extends Adventurer {
-    
+    private String resource;
+    private int special;
+
     public Warrior(String name){
         super(name);
     }
@@ -8,31 +10,31 @@ public class Warrior extends Adventurer {
         super(name, hp);
     }
 
-    String getSpecialName(){
-        
+    public String getSpecialName(){
+        super.getName();
     }
 
-    int getSpecial(){
+    public int getSpecial(){
 
     }
-    void getSpecial(){
-
+    public void setSpecial(int n){
+        this.special = n;
     }
-    int getSpecialMax(){
-
+    public int getSpecialMax(){
+        return 100;
     }
 
-    String attack(Adventurer other){
+    public String attack(Adventurer other){
 
     }
     
-    String support(Adventurer other){
+    public String support(Adventurer other){
 
     }
-    String support(){
+    public String support(){
 
     }
-    String specialAttack(Adventurer other){
-            
+    public String specialAttack(Adventurer other){
+        System.out.println()
     }
 }
