@@ -25,6 +25,8 @@ public class Warrior extends Adventurer {
     }
 
     public String attack(Adventurer other){
+        int n = other.getHP() - 5;
+        other.setHP(n);
         return getSpecialName() + "has attacked " + other.getName();
     }
     
