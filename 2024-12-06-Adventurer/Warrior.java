@@ -6,12 +6,14 @@ public class Warrior extends Adventurer {
         super(name);
     }
 
-    public Warrior(String name, int hp){
+    public Warrior(String name, int hp, String thing){
         super(name, hp);
+        this.resource = thing;
     }
 
     public String getSpecialName(){
-        return super.getName() + " the warrior";
+        this.resource = "mana";
+        return resource;
     }
 
     public int getSpecial(){
@@ -27,16 +29,23 @@ public class Warrior extends Adventurer {
     public String attack(Adventurer other){
         int n = other.getHP() - 5;
         other.setHP(n);
-        return getSpecialName() + "has attacked " + other.getName();
+        return getName() + "has attacked " + other.getName();
     }
     
     public String support(Adventurer other){
-
+        int n = other.getHP() + 5;
+        other.setHP(n);
+        return getName() + "has supported " + other.getName();
     }
     public String support(){
-
-    }
+        int n = getHP() + 5;
+        this.setHP(n); 
+        return getName() + " new hp is " + this.getHP();
+     }
     public String specialAttack(Adventurer other){
-        return
+        
+
+        return getName() + " has used " + getSpecial() + 
+        " and hurt the "  + other.getName();
     }
 }
