@@ -10,29 +10,49 @@ public class Game{
     System.out.println(p2.getName() + p2.getHP());
 
     Scanner userInput = new Scanner(System.in);
-
+    Random random = new Random();
     //You can do the rest many times:
-
+  while (p1.getHP() > 0 && p2.getHP() > 0){
     System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
     //Read one line of user input
-    String userName = userInput.nextLine();
-    if (userInput.equals("attack")){
+    String userInputt = userInput.nextLine();
+    if (userInputt.equals("attack")){
       p1.attack(p2);
     }
-    else if (userInput.equals("special")){
+    else if (userInputt.equals("special")){
       p1.specialAttack(p2);
     }
-    else if (userInput.equals("support")){
+    else if (userInputt.equals("support")){
       p1.support(p2);
     }
-    else if (userInput.equals("quit")){
+    else if (userInputt.equals("quit")){
       return;
     }
     else {
       System.out.println("type a valid response");
+      continue;
+    }
+    if(p2.getHP() > 0){
+      int opponent = random.nextInt(3);
+      if (opponent == 1){
+        p2.attack(p1);
+
+      }
+      else if (opponent == 2){
+        p2.specialAttack(p1);
+      }
+      else if (opponent == 3){
+        p2.support(p1);
+      }
     }
     //Do something with the input
 
+    }
+    if (p1.getHP() > p2.getHP()){
+      System.out.println("you have won");
+    }
+    else {
+      System.out.println("you have lost");
+    }
   }
-
 }
