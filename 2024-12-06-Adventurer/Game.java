@@ -1,6 +1,9 @@
+import java.io.*;
+import java.util.*;
+
 public class Game{
   Adventurer p1 = new CodeWarrior("joe", 100, "Java");
-  Adventurer p2 = new Codewarrior("bobby", 50, "python");
+  Adventurer p2 = new CodeWarrior("bobby", 50, "python");
 
   public static void main(String[] args){
     System.out.println(p1.getName() + p1.getHP());
@@ -10,23 +13,23 @@ public class Game{
 
     //You can do the rest many times:
 
-    System.out.println("Type: (a)ttack / (sp)ecial / (su)pport" / quit");
+    System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
     //Read one line of user input
     String userName = userInput.nextLine();
-    if (input.equals("attack")){
+    if (userInput.equals("attack")){
       p1.attack(p2);
     }
-    else if (input.equals("special"){
+    else if (userInput.equals("special")){
       p1.specialAttack(p2);
     }
-    else if (input.equals("support"){
+    else if (userInput.equals("support")){
       p1.support(p2);
     }
-    else if (input.equals("quit")){
-      System.exit();
+    else if (userInput.equals("quit")){
+      return;
     }
     else {
-      System.out.printl("type a valid response");
+      System.out.println("type a valid response");
     }
     //Do something with the input
 
