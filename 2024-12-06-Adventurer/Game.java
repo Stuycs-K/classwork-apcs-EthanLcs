@@ -1,9 +1,8 @@
-import java.io.*;
 import java.util.*;
 
 public class Game{
-  Adventurer p1 = new CodeWarrior("joe", 100, "Java");
-  Adventurer p2 = new CodeWarrior("bobby", 50, "python");
+  static Adventurer p1 = new CodeWarrior("joe", 100, "Java");
+  static Adventurer p2 = new CodeWarrior("bobby", 50, "python");
 
   public static void main(String[] args){
     System.out.println(p1.getName() + p1.getHP());
@@ -36,18 +35,20 @@ public class Game{
       int opponent = random.nextInt(3);
       if (opponent == 1){
         p2.attack(p1);
-
+        System.out.println("you got attacked");
       }
       else if (opponent == 2){
         p2.specialAttack(p1);
+        System.out.println("you got special attacked");
       }
       else if (opponent == 3){
         p2.support(p1);
       }
     }
     //Do something with the input
-
-    }
+  }
+  userInput.close();
+  
     if (p1.getHP() > p2.getHP()){
       System.out.println("you have won");
     }
