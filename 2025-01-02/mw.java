@@ -1,12 +1,14 @@
-public class makewords{
-  public static Arraylist<String> mw(int remaining, String partial, String alphabet, ArrayList<String> words){
-    if (remaining == 0){
-      words.add(partial);
+public class mw{
+  public static void makeWords(int remainingLetters, String partial, String alphabet){
+    if (remainingLetters == 0){
+      System.out.println(partial);
+      return;
     }
-    else {
-      for (int i = 0; i < words.size(); i++){
-        return makeWords(remaining - 1,partial + alphabet.substring(1), alphabet.substring(1), words);
+
+      for (int i = 0; i < alphabet.length(); i++){
+        makeWords(remainingLetters - 1,partial + alphabet.charAt(i), alphabet);
       }
-    }
   }
 }
+
+
